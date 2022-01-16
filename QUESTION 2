@@ -1,31 +1,39 @@
 package quiz2;
-
+import java.util.Scanner;
 public class Question2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] array = {2, 4, 6, 8 ,12};
+		Scanner scanMe = new Scanner (System.in);
 		
-		printArrayInStars(array);
-	}
+		System.out.print("Please enter the number of items : ");
+		int num_item = scanMe.nextInt();
+		int items[] = new int[num_item];
+		
+		System.out.println("Please enter the value of all items(separated by space) : ");
 	
-	public static void printArrayInStars(int[] array) {
-		
-		for(int i = 0; i < array.length; i++) {
-			int num = array[i];
+		for(int a = 0; a < items.length; a++) {
+			items[a] = scanMe.nextInt();
 			
-		for(int j = 1; j <= num; j++) {
-			System.out.print("*");
+		}
+		for(int a = 0; a < num_item; a++) {
+			System.out.print(a + ":");
+			for(int b = 0; b < items[a]; b++) {
+				System.out.print("*");
 			}
-		System.out.println(" ");
+			System.out.print("(" + items[a] + ")");
+			System.out.println();
 		}
 	}
 }
 
 Output :
 
-** 
-**** 
-****** 
-******** 
-************ 
+Please enter the number of items : 5
+Please enter the value of all items(separated by space) : 
+7 4 3 0 7
+0:*******(7)
+1:****(4)
+2:***(3)
+3:(0)
+4:*******(7)
