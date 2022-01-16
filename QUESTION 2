@@ -1,0 +1,31 @@
+package quiz2;
+
+public class Question2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] array = {2, 4, 6, 8 ,12};
+		
+		printArrayInStars(array);
+	}
+	
+	public static void printArrayInStars(int[] array) {
+		
+		for(int i = 0; i < array.length; i++) {
+			int num = array[i];
+			
+		for(int j = 1; j <= num; j++) {
+			System.out.print("*");
+			}
+		System.out.println(" ");
+		}
+	}
+}
+
+Output :
+
+** 
+**** 
+****** 
+******** 
+************ 
